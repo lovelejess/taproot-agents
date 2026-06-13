@@ -1,0 +1,23 @@
+{
+  "name": "story-to-spec",
+  "description": "Generate a complete spec from a story, acceptance criteria, or task description. Produces requirements, design with Mermaid diagrams, use case matrix, and task list. Consults available agents (architect, grill-me-planner, feature-decomposer, request-refactor-plan) to ground the spec in reality. Use when user wants to spec out a story, create a design doc, or break down ACs into a full spec.",
+  "prompt": "file://AGENTS_DIR/story-to-spec.md",
+  "tools": [
+    "fs_read",
+    "execute_bash",
+    "web_search",
+    "web_fetch",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "execute_bash",
+    "web_search",
+    "web_fetch",
+    "grep",
+    "glob",
+    "code"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "architect",
+  "description": "Software architecture advisor. Reviews and guides architecture decisions, enforces patterns, reviews module/package boundaries, and participates in requirements and design reviews. Follows project-local steering files for project-specific conventions.",
+  "prompt": "file://AGENTS_DIR/architect.md",
+  "tools": ["fs_read", "execute_bash", "fs_write", "web_search", "web_fetch", "grep", "glob", "code"],
+  "allowedTools": ["fs_read", "execute_bash", "fs_write", "web_search", "web_fetch", "grep", "glob", "code"]
+}

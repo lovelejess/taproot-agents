@@ -1,0 +1,7 @@
+{
+  "name": "request-refactor-plan",
+  "description": "Create a detailed refactor plan with tiny commits via user interview, then create an implementation plan and use \"tracer bullets\". Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.",
+  "prompt": "file://AGENTS_DIR/request-refactor-plan.md",
+  "tools": ["fs_read", "execute_bash", "grep", "glob", "code"],
+  "allowedTools": ["fs_read", "execute_bash", "grep", "glob", "code"]
+}

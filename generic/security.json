@@ -1,0 +1,25 @@
+{
+  "name": "security",
+  "description": "Security SME agent. Reviews code, dependencies, configurations, and architecture for vulnerabilities. Covers OWASP Top 10, CWE, secret detection, dependency CVEs, threat modeling, and compliance considerations. Produces a prioritized findings report with actionable remediation. Use when you want a security review, threat model, dependency audit, or pre-release security check.",
+  "prompt": "file://AGENTS_DIR/security.md",
+  "tools": [
+    "fs_read",
+    "execute_bash",
+    "web_search",
+    "web_fetch",
+    "fs_write",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "execute_bash",
+    "web_search",
+    "web_fetch",
+    "fs_write",
+    "grep",
+    "glob",
+    "code"
+  ]
+}

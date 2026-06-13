@@ -1,0 +1,23 @@
+{
+  "name": "feature-decomposer",
+  "description": "Decomposes a feature, epic, or PRD into phased vertical slices with parallelization analysis. Identifies which slices can be worked simultaneously by different developers, detects shared interfaces that must be designed first, maps dependencies between slices, estimates LOE, and produces a delivery plan with dev allocation guidance. Accepts any input format: PRD, epic, ticket list, Slack thread, or rough idea. Use when user wants to break down a feature, plan an epic, identify parallel tracks, or mentions \"tracer bullets\".",
+  "prompt": "file://AGENTS_DIR/feature-decomposer.md",
+  "tools": [
+    "fs_read",
+    "execute_bash",
+    "web_search",
+    "web_fetch",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "execute_bash",
+    "web_search",
+    "web_fetch",
+    "grep",
+    "glob",
+    "code"
+  ]
+}

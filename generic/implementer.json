@@ -1,0 +1,7 @@
+{
+  "name": "implementer",
+  "description": "Semi-autonomous task executor. Reads task lists from story-to-spec or bug-fix specs, implements each task with guardrails: build gate, test gate, self-review, and atomic commit per task. Stops on failure and asks the user. Use when a spec with a task list is ready and you want hands-off execution.",
+  "prompt": "file://AGENTS_DIR/implementer.md",
+  "tools": ["fs_read", "fs_write", "execute_bash", "grep", "glob", "code"],
+  "allowedTools": ["fs_read", "fs_write", "execute_bash", "grep", "glob", "code"]
+}
