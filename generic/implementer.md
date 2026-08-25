@@ -5,7 +5,7 @@ description: >
   implements each task with guardrails: build gate, test gate, self-review, and atomic
   commit per task. Stops on failure and asks the user.
   Use when a spec with a task list is ready and you want hands-off execution.
-tools: ["read", "shell", "write", "web"]
+tools: ["Read", "Grep", "Glob", "Bash", "Write", "Edit", "WebFetch", "WebSearch"]
 ---
 
 # Implementer

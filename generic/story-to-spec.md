@@ -6,7 +6,7 @@ description: >
   Consults available agents (architect, grill-me-planner, feature-decomposer,
   request-refactor-plan) to ground the spec in reality.
   Use when user wants to spec out a story, create a design doc, or break down ACs into a full spec.
-tools: ["read", "shell", "web"]
+tools: ["Read", "Grep", "Glob", "Bash", "Write", "Edit", "WebFetch", "WebSearch"]
 ---
 
 ## GitHub Integration
@@ -28,9 +28,38 @@ The story, acceptance criteria, or task description should already be in the con
 ### 2. Gather context from specs and codebase
 
 **Check for existing requirements and specs first:**
-- Read `.claude/specs/` for existing feature specs, requirements, and acceptance criteria related to this story
-- Check `.claude/steering/` for project conventions and architectural guidance
+- Read `roamily-specs/specs/` for existing feature specs, requirements, and acceptance criteria
+  related to this story. **Start with `roamily-specs/specs/_index.md`** — one row per spec,
+  each summarising what shipped and what was rejected, which is the fastest way to find out
+  whether this ground is already covered.
+- Check `roamily-specs/steering/` for project conventions and architectural guidance
+  (`product.md`, `tech.md`, `structure.md`, `decision-rights.md`)
 - Look for any PRDs, design docs, or spec files in the current repo that relate to the story
+
+**Then check prior art in the code — this step is not optional.**
+
+For every file you expect the design to touch, do two things in the implementing repo:
+
+```
+git log --oneline -- <path>
+```
+
+…and read that file's type/doc comment. You are looking for **an approach that was already
+tried and removed**, and why.
+
+Record the answer in the design's *Prior art* section — including "nothing found", so a
+reader knows the check ran.
+
+*Why this is mandatory:* `x-events-calendar` proposed a calendar button for the Events tab.
+One had existed and been deleted in `b2ea9cf` — "nobody found it", because it sat at the far
+end of a horizontal scroll, and the sheet behind it had no availability marks, so "four picks
+in five landed on an empty screen." The spec was written without that and specified the
+control as *"fixed-width, pinned trailing"* — the exact placement that had failed. Both facts
+were one command away, in a file the spec already named. It was caught only when the
+implementer opened that file, by which point the design was written and wrong.
+
+A design that repeats a removed approach is not automatically wrong. But it must know it is
+repeating one, and state what is different this time.
 
 **Then explore the codebase to understand:**
 - Current architecture and patterns relevant to this story

@@ -5,7 +5,7 @@ description: >
   enforces patterns, reviews module/package boundaries, and participates in
   requirements and design reviews. Follows project-local steering files for
   project-specific conventions.
-tools: ["read", "shell", "write", "web"]
+tools: ["Read", "Grep", "Glob", "Bash", "Write", "Edit", "WebFetch", "WebSearch"]
 ---
 
 # Architect

@@ -6,7 +6,7 @@ description: >
   threat modeling, and compliance considerations. Produces a prioritized findings
   report with actionable remediation. Use when you want a security review, threat model,
   dependency audit, or pre-release security check.
-tools: ["read", "shell", "web", "write"]
+tools: ["Read", "Grep", "Glob", "Bash", "Write", "Edit", "WebFetch", "WebSearch"]
 ---
 
 # Security Agent

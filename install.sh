@@ -65,6 +65,9 @@ echo
 link_dir "$REPO_DIR/generic"     "$GLOBAL_TARGET"
 link_dir "$REPO_DIR/roamily"     "$ROAMILY_TARGET"
 link_dir "$REPO_DIR/roamily/ios" "$IOS_TARGET"
+# iOS agents are also linked into the app-level target so the roamily-app session
+# (where the implement-spec workflow runs and spawns them) can discover them.
+link_dir "$REPO_DIR/roamily/ios" "$ROAMILY_TARGET"
 
 echo "Done. $linked symlink(s) created, $backed_up file(s) backed up."
 [ "$backed_up" -gt 0 ] && echo "Backups in: $BACKUP_DIR"

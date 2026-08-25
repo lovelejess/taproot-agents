@@ -8,7 +8,7 @@ description: >
   Accepts any input format: PRD, epic, ticket list, Slack thread, or rough idea.
   Use when user wants to break down a feature, plan an epic, identify parallel tracks,
   or mentions "tracer bullets".
-tools: ["read", "shell", "web"]
+tools: ["Read", "Grep", "Glob", "Bash", "WebFetch", "WebSearch"]
 ---
 
 ## GitHub Integration
