@@ -12,7 +12,7 @@ Professional/product agents only — no personal agents live here.
 | Dir | Symlinked into | Agents |
 |-----|----------------|--------|
 | `generic/` | `~/.claude/agents/` (global, all projects) | `architect`, `feature-decomposer`, `grill-me-planner`, `implementer`, `request-refactor-plan`, `security`, `story-to-spec` |
-| `roamily/` | `<roamily-app>/.claude/agents/` | `analytics-expert`, `ceo`, `grill-me`, `growth-monetization`, `legal-expert`, `marketing-executive`, `product-manager`, `project-manager`, `technical-expert`, `ux-expert` |
+| `roamily/` | `<roamily-app>/.claude/agents/` | `analytics-expert`, `brand-curator`, `ceo`, `grill-me`, `growth-monetization`, `legal-expert`, `marketing-executive`, `product-manager`, `project-manager`, `technical-expert`, `ux-expert`, `voice-content-curator` |
 | `roamily/ios/` | `<roamily-app>/roamily-ios/.claude/agents/` | `content-curator` |
 
 `generic/` agents ship a `.json` sidecar (registration metadata) alongside each
